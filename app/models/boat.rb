@@ -12,5 +12,7 @@ class Boat < ActiveRecord::Base
   end
   
   def self.ship
+     boats = Boat.all
+    boats.filter{|b| b.length >= 20}
   end
 end
