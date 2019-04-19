@@ -17,10 +17,12 @@ class Boat < ActiveRecord::Base
   end
   
   def self.last_three_alphabetically
-    all.order(name: :desc).limit(3)
+    boats = Boat.all
+    boats.order_by(name: :desc).limit(3)
   end
 
   def self.without_a_captain
+    
     where(captain_id: nil)
   end
 
