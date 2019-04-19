@@ -15,4 +15,5 @@ class Boat < ActiveRecord::Base
      boats = Boat.all
      boats.filter{|b| b.length >= 20}
   end
+  def 
 end
